@@ -1,0 +1,36 @@
+{
+  "name": "@restsense/agent",
+  "version": "1.0.0",
+  "description": "Agent for reporting telemetry to OTLP/GRPC server",
+  "author": "alesancor1",
+  "license": "GNU General Public License v3.0",
+  "main": "build/index.js",
+  "exports": {
+    ".": "./build/index.js",
+    "./metrics": "./build/instrumentation/metrics.js",
+    "./tracing": "./build/instrumentation/tracing.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@opentelemetry/exporter-metrics-otlp-grpc": "^0.38.0",
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.38.0",
+    "@opentelemetry/host-metrics": "^0.32.1",
+    "@opentelemetry/instrumentation": "^0.38.0",
+    "@opentelemetry/instrumentation-express": "^0.32.2",
+    "@opentelemetry/instrumentation-http": "^0.38.0",
+    "@opentelemetry/resources": "^1.12.0",
+    "@opentelemetry/sdk-metrics": "^1.12.0",
+    "@opentelemetry/sdk-trace-base": "^1.12.0",
+    "@opentelemetry/sdk-trace-node": "^1.12.0",
+    "@opentelemetry/semantic-conventions": "^1.12.0"
+  }
+}
