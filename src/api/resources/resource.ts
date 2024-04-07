@@ -1,6 +1,6 @@
 import { Resource, envDetector, processDetector, detectResourcesSync } from "@opentelemetry/resources";
 import { SemanticResourceAttributes } from "@opentelemetry/semantic-conventions";
-import config from '../configuration';
+import config from '../../configuration';
 
 /* Config resource metadata */
 export default detectResourcesSync({
