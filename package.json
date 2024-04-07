@@ -1,6 +1,6 @@
 {
   "name": "@restsense/agent",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Agent for reporting telemetry to OTLP/GRPC server",
   "author": "alesancor1",
   "license": "GNU General Public License v3.0",
