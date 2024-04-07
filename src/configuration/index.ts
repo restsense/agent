@@ -10,9 +10,11 @@ export default {
     serviceIp: os.networkInterfaces().eth0?.[0]?.address ?? 'unknown',
     collectorUrl: process.env.RESTSENSE_COLLECTOR_URL ?? '127.0.0.1:4317',
     metrics: {
+        enable: Boolean(process.env.RESTSENSE_METRIC_INSTRUMENTATION ?? true),
         interval: parseInt(process.env.RESTSENSE_METRICS_INTERVAL) ?? 60000,
     },
     tracing: {
+        enable: Boolean(process.env.RESTSENSE_TRACE_INSTRUMENTATION ?? true),
         expressTraces: process.env.RESTSENSE_TRACING_ENABLE_EXPRESS ?? false,
     }
 }

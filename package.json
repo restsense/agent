@@ -7,8 +7,9 @@
   "main": "build/index.js",
   "exports": {
     ".": "./build/index.js",
-    "./metrics": "./build/instrumentation/metrics.js",
-    "./tracing": "./build/instrumentation/tracing.js"
+    "./api": "./build/api",
+    "./metrics": "./build/metrics.js",
+    "./tracing": "./build/tracing.js"
   },
   "scripts": {
     "build": "tsc"
@@ -20,6 +21,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "winston": "^3.13.0",
     "@grpc/grpc-js": "^1.8.14",
     "@opentelemetry/exporter-metrics-otlp-grpc": "^0.38.0",
     "@opentelemetry/exporter-trace-otlp-grpc": "^0.38.0",
